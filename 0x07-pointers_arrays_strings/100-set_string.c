@@ -1,7 +1,9 @@
 #include "main.h"
 
 /**
- * main - entry
+ * set_string - entry
+ * @s: variable of pointer
+ * @to: char
  * Return: Always 0
  */
 
