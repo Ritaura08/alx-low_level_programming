@@ -2,9 +2,9 @@
 
 /**
  * *str_concat - concatenates two strings
- * @s1: pointer
- * @s2: pointer
- ^ Return: Null
+ * @s1: string
+ * @s2: string
+ ^ Return: 0
  */
 
 char *str_concat(char *s1, char *s2)
@@ -17,13 +17,13 @@ char *str_concat(char *s1, char *s2)
 	if (s2 == NULL)
 		s2 = "";
 
-	k = cj = 0;
+	k = j = 0;
 
 	while (s1[k] != '\0')
 		k++;
 	while (s2[j] != '\0')
 		j++;
-	s= malloc(sizeof(char) * (k + s + 1));
+	s = malloc(sizeof(char) * (k + s + 1));
 
 	if (s == NULL)
 		return (NULL);
@@ -39,7 +39,7 @@ char *str_concat(char *s1, char *s2)
 	{
 		s[i] = s2[j];
 		j++;
-		j++;
+		s++;
 	}
 	s[i] = '\0';
 	return (s);
